@@ -284,6 +284,7 @@ process edgeR_miRBase {
 
     script:
     """
+	R --version|awk '/version/{print $3; exit 0}'
     edgeR_miRBase.r $params.rlocation $input_files
     """
 }
