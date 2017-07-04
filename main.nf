@@ -194,7 +194,7 @@ process bowtie_miRBase_mature {
         -e 99999 \\
         -k 10 \\
         --best \\
-        --chunkmbs 2048 \\
+        --chunkmbs 1024 \\
         --un ${prefix}.mature_unmapped.fq \\
         -S \\
         | samtools view -bS - > ${prefix}.mature.bam
@@ -231,7 +231,7 @@ process bowtie_miRBase_hairpin {
         -e 99999 \\
         -k 10 \\
         --best \\
-        --chunkmbs 2048 \\
+        --chunkmbs 1024 \\
         -q <(zcat $reads) \\
         --un ${prefix}.hairpin_unmapped.fq \\
         -S \\
